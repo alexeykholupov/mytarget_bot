@@ -35,7 +35,7 @@ describe 'Bot' do
     bot.create_placements(1)
     it 'Creates 1 additional placement' do
       expect(bot.placement_list.count).to eq 2
+    end
   end
-end
-  headless.destroy 
+  headless.destroy
 end

@@ -6,9 +6,9 @@ require_relative 'lib/app'
 require_relative 'lib/bot'
 Capybara.default_max_wait_time = 30
 PLACEMENTS_NUMBER = 4
-puts "This is bot for ad placement on myTarget service."
-confirm = "null"
-while confirm.downcase != "yes"
+puts 'This is bot for ad placement on myTarget service.'
+confirm = 'null'
+until confirm.casecmp('yes').zero?
   puts 'Enter valid login:'
   login = gets.chomp
   puts 'Enter valid password:'
@@ -21,8 +21,8 @@ while confirm.downcase != "yes"
 end
 
 environment = 0
-until environment == "1" || environment == "2"
-  puts "Choose environment: " + "\n 1 = Production." + "\n 2 = Test." + "\n1/2?"
+until environment == '1' || environment == '2'
+  puts 'Choose environment: ' + "\n 1 = Production." + "\n 2 = Test." + "\n1/2?"
   environment = gets.chomp
 end
 headless = Headless.new

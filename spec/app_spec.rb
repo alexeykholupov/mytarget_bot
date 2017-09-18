@@ -2,7 +2,6 @@ require 'app'
 
 describe 'App' do
   context 'construction' do
-    
     appname = 'Some App'
     url = 'someurl.com'
     app = App.new(appname, url)
@@ -13,6 +12,5 @@ describe 'App' do
     it 'returns correct url' do
       expect(app.url).to eq url
     end
-
-  end  
+  end
 end
