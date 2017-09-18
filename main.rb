@@ -1,4 +1,3 @@
-
 require 'capybara'
 require 'headless'
 require_relative 'lib/user'
